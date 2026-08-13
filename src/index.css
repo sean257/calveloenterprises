@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #123057;
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+.font-display {
+  font-family: "Space Grotesk", ui-sans-serif, sans-serif;
+}
+.font-body {
+  font-family: "Inter", ui-sans-serif, sans-serif;
+}
+.font-mono {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+/* focus ring */
+.foc:focus-visible {
+  outline: 2px solid #f0a83c;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* hero entrance */
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.rise {
+  animation: riseIn 0.7s ease both;
+}
+
+@keyframes driftGlow {
+  0% {
+    transform: scale(1) translate3d(0, 0, 0);
+    opacity: 0.72;
+  }
+  50% {
+    transform: scale(1.08) translate3d(1.5%, -1.5%, 0);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.12) translate3d(-1.2%, 1.2%, 0);
+    opacity: 0.8;
+  }
+}
+
+@keyframes sheenShift {
+  0% {
+    transform: translate3d(-2%, 0, 0);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translate3d(2%, 1%, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(-1%, -1%, 0);
+    opacity: 0.85;
+  }
+}
+
+/* dropdown menu animation */
+@keyframes dropdownSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-bg-glow {
+  animation: driftGlow 18s ease-in-out infinite alternate;
+}
+
+.hero-bg-sheen {
+  animation: sheenShift 22s ease-in-out infinite alternate;
+}
+
+/* bridge diagram draw-in */
+.bridge-path {
+  transition: stroke-dashoffset 1.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.bridge-node {
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bridge-path,
+  .bridge-node,
+  .rise {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* ---------------------------------------------------------------
+   Responsive grid system.
+   Usage: <div className="rgrid" style={{ '--rg-base':'1fr', '--rg-md':'1fr 1fr', '--rg-gap':'24px' }}>
+   Breakpoints follow a mobile-first cascade: base -> sm(640) -> md(768) -> lg(1024)
+   --------------------------------------------------------------- */
+.rgrid {
+  display: grid;
+  gap: var(--rg-gap, 20px);
+  grid-template-columns: var(--rg-base, 1fr);
+}
+@media (min-width: 640px) {
+  .rgrid {
+    grid-template-columns: var(--rg-sm, var(--rg-base, 1fr));
+  }
+}
+@media (min-width: 768px) {
+  .rgrid {
+    grid-template-columns: var(--rg-md, var(--rg-sm, var(--rg-base, 1fr)));
+  }
+}
+@media (min-width: 1024px) {
+  .rgrid {
+    grid-template-columns: var(--rg-lg, var(--rg-md, var(--rg-sm, var(--rg-base, 1fr))));
+  }
+}
+
+/* ---------------------------------------------------------------
+   Nav responsive visibility (replaces "hidden md:flex" style utilities)
+   --------------------------------------------------------------- */
+.nav-desktop-links {
+  display: none;
+}
+.nav-desktop-cta {
+  display: none;
+}
+.nav-mobile-toggle {
+  display: inline-flex;
+}
+.nav-mobile-panel {
+  display: block;
+}
+@media (min-width: 768px) {
+  .nav-desktop-links {
+    display: flex;
+  }
+  .nav-desktop-cta {
+    display: block;
+  }
+  .nav-mobile-toggle {
+    display: none;
+  }
+  .nav-mobile-panel {
+    display: none;
+  }
+}
