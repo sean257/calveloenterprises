@@ -5,7 +5,7 @@ export default function Privacy() {
   return (
     <LegalLayout eyebrow="Legal" title="Privacy Policy" updated="August 2026">
       <LegalSection title="Overview">
-        Calvelo Enterprises ("Calvelo", "we", "us", "our") provides business consulting and
+        Calvelo Enterprises provides business consulting and
         technology solutions to clients in multiple countries. This policy explains what information
         we collect through this website, how we use it, and the choices you have.
       </LegalSection>
