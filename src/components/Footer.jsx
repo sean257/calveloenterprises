@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Mail, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import { C } from "../theme";
 import { NAV, CONTACT } from "../data";
 import Logo from "./Logo";
@@ -77,22 +77,12 @@ export default function Footer({ setPage }) {
               className="font-body"
             >
               <a
-                href={`tel:${CONTACT.phone.replace(/\s/g, "")}`}
-                className="foc"
-                style={{ color: C.mutedOnDark, display: "flex", gap: 8, textDecoration: "none" }}
-              >
-                <Phone size={16} /> {CONTACT.phone}
-              </a>
-              <a
                 href={`mailto:${CONTACT.email}`}
                 className="foc"
                 style={{ color: C.mutedOnDark, display: "flex", gap: 8, textDecoration: "none" }}
               >
                 <Mail size={16} /> {CONTACT.email}
               </a>
-              <div style={{ display: "flex", gap: 8 }}>
-                <MapPin size={16} style={{ flexShrink: 0, marginTop: 2 }} /> {CONTACT.address}
-              </div>
             </div>
           </div>
         </div>

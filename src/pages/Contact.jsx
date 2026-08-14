@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Mail } from "lucide-react";
 import { C } from "../theme";
 import { CONTACT } from "../data";
 import AnimatedDarkSection from "../components/AnimatedDarkSection";
@@ -51,33 +51,6 @@ export default function Contact() {
         >
           <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
             <a
-              href={`tel:${CONTACT.phone.replace(/\s/g, "")}`}
-              className="foc"
-              style={{
-                textDecoration: "none",
-                background: C.white,
-                border: `1px solid ${C.paperDim}`,
-                borderRadius: 16,
-                padding: 22,
-                display: "flex",
-                gap: 16,
-                alignItems: "center",
-              }}
-            >
-              <Diamond Icon={Phone} tone="teal" size={44} />
-              <div>
-                <div
-                  className="font-mono"
-                  style={{ fontSize: 11, color: C.muted, letterSpacing: "0.1em", marginBottom: 4 }}
-                >
-                  PHONE
-                </div>
-                <div className="font-body" style={{ fontWeight: 600, color: C.ink }}>
-                  {CONTACT.phone}
-                </div>
-              </div>
-            </a>
-            <a
               href={`mailto:${CONTACT.email}`}
               className="foc"
               style={{
@@ -104,30 +77,6 @@ export default function Contact() {
                 </div>
               </div>
             </a>
-            <div
-              style={{
-                background: C.white,
-                border: `1px solid ${C.paperDim}`,
-                borderRadius: 16,
-                padding: 22,
-                display: "flex",
-                gap: 16,
-                alignItems: "center",
-              }}
-            >
-              <Diamond Icon={MapPin} tone="violet" size={44} />
-              <div>
-                <div
-                  className="font-mono"
-                  style={{ fontSize: 11, color: C.muted, letterSpacing: "0.1em", marginBottom: 4 }}
-                >
-                  ADDRESS
-                </div>
-                <div className="font-body" style={{ fontWeight: 600, color: C.ink }}>
-                  {CONTACT.address}
-                </div>
-              </div>
-            </div>
           </div>
           <div
             style={{
