@@ -94,7 +94,7 @@ export default function DigitalTransformation({ setPage }) {
                   }}
                 >
                   <img
-                    src={`https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=333&fit=crop&q=80`}
+                    src={`https://i.postimg.cc/C5GMwmwy/Gemini-Generated-Image-hpdvg2hpdvg2hpdv.jpg`}
                     alt={service.title}
                     style={{
                       position: "absolute",

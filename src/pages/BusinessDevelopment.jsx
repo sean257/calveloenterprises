@@ -15,6 +15,7 @@ const SERVICE_OFFERINGS = [
       "Growth pathway development",
       "Executive planning and decision support",
     ],
+    imageUrl: "https://i.postimg.cc/h4MJHtZ3/2026-Sales-Enablement-Trends.jpg",
   },
   {
     title: "Sales & Business Development Excellence",
@@ -27,6 +28,7 @@ const SERVICE_OFFERINGS = [
       "Customer acquisition strategy",
       "Proposal and tender preparation support",
     ],
+    imageUrl: "https://i.postimg.cc/HW3Jfkvq/Business.jpg",
   },
   {
     title: "Strategic Partnerships & Commercial Expansion",
@@ -38,6 +40,7 @@ const SERVICE_OFFERINGS = [
       "Market expansion and entry strategy",
       "Feasibility studies and business case development",
     ],
+    imageUrl: "https://i.postimg.cc/xjgkW1Fr/The-Role-of-Corporate-Finance-in-Growth.jpg",
   },
 ];
 
@@ -93,7 +96,7 @@ export default function BusinessDevelopment({ setPage }) {
                   }}
                 >
                   <img
-                    src={`https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=333&fit=crop&q=80`}
+                    src={service.imageUrl}
                     alt={service.title}
                     style={{
                       position: "absolute",

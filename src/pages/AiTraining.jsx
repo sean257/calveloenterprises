@@ -19,6 +19,8 @@ const TRAINING_COURSES = [
       "Building organizational AI capability",
       "Creating and executing an AI adoption roadmap",
     ],
+    imageUrl:
+      "https://i.postimg.cc/qBQt9vD9/Artificial-Intelligence-Course-in-Kerala-A-Guide-for-Learners.jpg",
   },
   {
     title: "Practical, Applied Training for AI",
@@ -35,6 +37,8 @@ const TRAINING_COURSES = [
       "Building sustainable AI habits in your work",
       "Practical problem-solving with AI tools",
     ],
+    imageUrl:
+      "https://i.postimg.cc/nVTs6hS5/Artificial-Intelligence-Classroom-Learning-AI-Machine-Learning-Training-for-Students.jpg",
   },
   {
     title: "AI for Small Business & Entrepreneurs",
@@ -51,6 +55,7 @@ const TRAINING_COURSES = [
       "Cost reduction through intelligent automation",
       "Customer experience enhancement with AI",
     ],
+    imageUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop&q=80",
   },
 ];
 
@@ -418,7 +423,7 @@ export default function AiTraining({ setPage }) {
                   }}
                 >
                   <img
-                    src={`https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=333&fit=crop&q=80`}
+                    src={course.imageUrl}
                     alt={course.title}
                     style={{
                       position: "absolute",
