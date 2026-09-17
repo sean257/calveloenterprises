@@ -15,6 +15,26 @@ import AiTraining from "./pages/AiTraining";
 import BusinessDevelopment from "./pages/BusinessDevelopment";
 import DigitalTransformation from "./pages/DigitalTransformation";
 
+const PAGE_TO_PATH = {
+  home: "/",
+  services: "/services",
+  industries: "/industries",
+  about: "/about",
+  faq: "/faq",
+  "ai-training": "/ai-training",
+  "business-development": "/business-development",
+  "digital-transformation": "/digital-transformation",
+  contact: "/contact",
+  privacy: "/privacy",
+  terms: "/terms",
+};
+
+const PATH_TO_PAGE = Object.fromEntries(
+  Object.entries(PAGE_TO_PATH).map(([page, path]) => [path, page]),
+);
+
+const SITE_URL = "https://calveloenterprises.com";
+
 const META = {
   home: {
     title: "Calvelo Business Development | From Strategy to Solution",
@@ -91,7 +111,28 @@ const localBusinessSchema = {
 };
 
 export default function App() {
-  const [page, setPage] = useState("home");
+  const getPageFromPath = () => {
+    const pathname = window.location.pathname;
+    if (pathname === "/") return "home";
+    return PATH_TO_PAGE[pathname] || "home";
+  };
+
+  const [page, setPage] = useState(() => getPageFromPath());
+
+  const updatePage = (nextPage) => {
+    const nextPath = PAGE_TO_PATH[nextPage] || "/";
+    setPage(nextPage);
+    window.history.pushState({}, "", nextPath);
+  };
+
+  useEffect(() => {
+    const onPopState = () => {
+      setPage(getPageFromPath());
+    };
+
+    window.addEventListener("popstate", onPopState);
+    return () => window.removeEventListener("popstate", onPopState);
+  }, []);
 
   useEffect(() => {
     const meta = META[page] || META.home;
@@ -106,21 +147,34 @@ export default function App() {
     }
     descriptionTag.setAttribute("content", meta.description);
 
-    ["og:title", "og:description", "twitter:title", "twitter:description"].forEach((property) => {
-      let tag = document.querySelector(`meta[property="${property}"]`);
-      if (!tag && property.startsWith("twitter:")) {
-        tag = document.querySelector(`meta[name="${property.replace(":", "-")}"]`);
-      }
+    const canonicalUrl = `${SITE_URL}${PAGE_TO_PATH[page] || "/"}`;
+    let canonicalTag = document.querySelector('link[rel="canonical"]');
+    if (!canonicalTag) {
+      canonicalTag = document.createElement("link");
+      canonicalTag.rel = "canonical";
+      document.head.appendChild(canonicalTag);
+    }
+    canonicalTag.setAttribute("href", canonicalUrl);
+
+    [
+      ["og:url", "property", canonicalUrl],
+      ["og:title", "property", meta.title],
+      ["og:description", "property", meta.description],
+      ["twitter:url", "name", canonicalUrl],
+      ["twitter:title", "name", meta.title],
+      ["twitter:description", "name", meta.description],
+    ].forEach(([key, attrName, content]) => {
+      let tag = document.querySelector(
+        attrName === "property"
+          ? `meta[property="${key}"]`
+          : `meta[name="${key}"]`,
+      );
       if (!tag) {
         tag = document.createElement("meta");
-        if (property.startsWith("og:")) tag.setAttribute("property", property);
-        else tag.setAttribute("name", property.replace(":", "-"));
+        tag.setAttribute(attrName, key);
         document.head.appendChild(tag);
       }
-      tag.setAttribute("content", meta.title || meta.description);
-      if (property === "og:description" || property === "twitter:description") {
-        tag.setAttribute("content", meta.description);
-      }
+      tag.setAttribute("content", content);
     });
 
     let schemaTag = document.getElementById("calvelo-schema");
@@ -135,24 +189,24 @@ export default function App() {
 
   return (
     <div className="font-body" style={{ background: C.navy, minHeight: "100vh" }}>
-      <Nav page={page} setPage={setPage} />
-      {page === "home" && <Home setPage={setPage} />}
-      {page === "services" && <Services setPage={setPage} />}
-      {page === "industries" && <Industries setPage={setPage} />}
-      {page === "about" && <About setPage={setPage} />}
-      {page === "faq" && <Faq setPage={setPage} />}
-      {page === "ai-training" && <AiTraining setPage={setPage} />}
-      {page === "business-development" && <BusinessDevelopment setPage={setPage} />}
-      {page === "digital-transformation" && <DigitalTransformation setPage={setPage} />}
+      <Nav page={page} setPage={updatePage} />
+      {page === "home" && <Home setPage={updatePage} />}
+      {page === "services" && <Services setPage={updatePage} />}
+      {page === "industries" && <Industries setPage={updatePage} />}
+      {page === "about" && <About setPage={updatePage} />}
+      {page === "faq" && <Faq setPage={updatePage} />}
+      {page === "ai-training" && <AiTraining setPage={updatePage} />}
+      {page === "business-development" && <BusinessDevelopment setPage={updatePage} />}
+      {page === "digital-transformation" && <DigitalTransformation setPage={updatePage} />}
       {page === "contact" && <Contact />}
       {page === "privacy" && <Privacy />}
       {page === "terms" && <Terms />}
-      <Footer setPage={setPage} />
+      <Footer setPage={updatePage} />
 
       <button
         type="button"
         aria-label="Open FAQ bot"
-        onClick={() => setPage("faq")}
+        onClick={() => updatePage("faq")}
         style={{
           position: "fixed",
           right: 22,
