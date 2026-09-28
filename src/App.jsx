@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { MessageSquareText } from "lucide-react";
+import { MessageSquareText, MessageCircle } from "lucide-react";
 import { C } from "./theme";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
@@ -30,7 +30,7 @@ const PAGE_TO_PATH = {
 };
 
 const PATH_TO_PAGE = Object.fromEntries(
-  Object.entries(PAGE_TO_PATH).map(([page, path]) => [path, page]),
+  Object.entries(PAGE_TO_PATH).map(([page, path]) => [path, page])
 );
 
 const SITE_URL = "https://calveloenterprises.com";
@@ -165,9 +165,7 @@ export default function App() {
       ["twitter:description", "name", meta.description],
     ].forEach(([key, attrName, content]) => {
       let tag = document.querySelector(
-        attrName === "property"
-          ? `meta[property="${key}"]`
-          : `meta[name="${key}"]`,
+        attrName === "property" ? `meta[property="${key}"]` : `meta[name="${key}"]`
       );
       if (!tag) {
         tag = document.createElement("meta");
@@ -202,6 +200,33 @@ export default function App() {
       {page === "privacy" && <Privacy />}
       {page === "terms" && <Terms />}
       <Footer setPage={updatePage} />
+
+      <a
+        href="https://wa.me/c/263779365818"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Chat on WhatsApp"
+        style={{
+          position: "fixed",
+          right: 22,
+          bottom: 96,
+          width: 58,
+          height: 58,
+          borderRadius: "50%",
+          border: "none",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          background: "linear-gradient(135deg, #25D366, #1DAE5A)",
+          color: "white",
+          boxShadow: "0 14px 30px rgba(37, 211, 102, 0.3)",
+          zIndex: 100,
+          cursor: "pointer",
+          textDecoration: "none",
+        }}
+      >
+        <MessageCircle size={24} />
+      </a>
 
       <button
         type="button"

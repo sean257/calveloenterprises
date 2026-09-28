@@ -50,6 +50,15 @@ export default function BusinessDevelopment({ setPage }) {
     window.scrollTo(0, 0);
   };
 
+  const handleLearnMore = (serviceTitle) => {
+    const message = `Hi Calvelo,\n\nI would like to learn more about ${serviceTitle} on the Business Development & Consulting page. Please share more details about this service and the next steps for getting started.\n\nThank you.`;
+    window.sessionStorage.setItem(
+      "calveloServiceLead",
+      JSON.stringify({ service: serviceTitle, page: "Business Development & Consulting", message })
+    );
+    go("contact");
+  };
+
   return (
     <>
       <AnimatedDarkSection>
@@ -201,10 +210,10 @@ export default function BusinessDevelopment({ setPage }) {
                   <Button
                     tone="gold"
                     size="sm"
-                    onClick={() => go("contact")}
+                    onClick={() => handleLearnMore(service.title)}
                     style={{ marginTop: "auto" }}
                   >
-                    Get Started
+                    Learn More
                   </Button>
                 </div>
               </div>

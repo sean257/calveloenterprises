@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Mail } from "lucide-react";
 import { C } from "../theme";
 import { CONTACT } from "../data";
@@ -9,9 +9,35 @@ import { Diamond } from "../components/Icons";
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
+
+  useEffect(() => {
+    const raw = window.sessionStorage.getItem("calveloServiceLead");
+    if (!raw) return;
+
+    try {
+      const lead = JSON.parse(raw);
+      if (lead?.message) {
+        setForm((prev) => ({ ...prev, message: lead.message }));
+      }
+      window.sessionStorage.removeItem("calveloServiceLead");
+    } catch (error) {
+      console.error("Unable to parse service lead data", error);
+      window.sessionStorage.removeItem("calveloServiceLead");
+    }
+  }, []);
+
   const submit = () => {
-    const subject = encodeURIComponent(`Enquiry from ${form.name || "website visitor"}`);
-    const body = encodeURIComponent(`${form.message}\n\n— ${form.name} (${form.email})`);
+    const lead = (() => {
+      try {
+        return JSON.parse(window.sessionStorage.getItem("calveloServiceLead") || "null");
+      } catch {
+        return null;
+      }
+    })();
+
+    const serviceName = lead?.service || "a service";
+    const subject = encodeURIComponent(`Enquiry: ${serviceName}`);
+    const body = encodeURIComponent(`${form.message || lead?.message || ""}\n\n— ${form.name} (${form.email})`);
     window.location.href = `mailto:${CONTACT.email}?subject=${subject}&body=${body}`;
   };
   const inputStyle = {

@@ -8,8 +8,11 @@ const TRAINING_COURSES = [
   {
     title: "AI Essentials for Professionals",
     badge: "ENROLLING NOW",
+    relatedService: "Artificial Intelligence",
     builtFor:
       "Operations managers, business analysts, decision-makers ready to lead AI adoption in their teams.",
+    summary:
+      "A practical introduction to AI concepts, use cases, and adoption strategy for modern organizations.",
     duration: "4 weeks | 2 hours/week",
     format: "Hybrid (online + live sessions)",
     skills: [
@@ -25,8 +28,11 @@ const TRAINING_COURSES = [
   {
     title: "Practical, Applied Training for AI",
     badge: "ENROLLING NOW",
+    relatedService: "Artificial Intelligence",
     builtFor:
       "Teams who write, analyze, communicate, and solve problems — anyone ready to use AI in daily work.",
+    summary:
+      "Hands-on training focused on applying AI tools to everyday business tasks with confidence and control.",
     duration: "6 weeks | 3 hours/week",
     format: "Hands-on labs + group projects",
     skills: [
@@ -43,8 +49,11 @@ const TRAINING_COURSES = [
   {
     title: "AI for Small Business & Entrepreneurs",
     badge: "ENROLLING NOW",
+    relatedService: "Artificial Intelligence",
     builtFor:
       "Business owners, entrepreneurs, and team leaders ready to accelerate growth with AI.",
+    summary:
+      "A focused learning path for owners who want practical AI tools that improve operations, strategy, and customer experience.",
     duration: "5 weeks | 2.5 hours/week",
     format: "Interactive workshops + 1-on-1 coaching",
     skills: [
@@ -56,6 +65,460 @@ const TRAINING_COURSES = [
       "Customer experience enhancement with AI",
     ],
     imageUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop&q=80",
+  },
+  {
+    title: "AI Essentials for the Zimbabwean Professional",
+    badge: "ENROLLING NOW",
+    relatedService: "Artificial Intelligence",
+    builtFor: "Admin & operations, marketing & communications, finance, customer service: anyone starting from zero.",
+    summary:
+      "A beginner-friendly introduction to AI literacy, prompt writing, safety, verification, and responsible use in everyday work.",
+    duration: "8 hours",
+    format: "Online or in-person",
+    skills: [
+      "AI Literacy",
+      "Prompt Writing",
+      "AI Safety & Verification",
+      "Responsible AI Use",
+    ],
+    bonus: "Professional Certificate of Competence in Applied AI Systems, verifiable online",
+    detail: "Level: Beginner-friendly | Schedule: 4 weekly sessions or 2 half-days",
+    imageUrl: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop&q=80",
+  },
+  {
+    title: "AI for Everyday Work",
+    badge: "ENROLLING NOW",
+    relatedService: "Artificial Intelligence",
+    builtFor: "Anyone who writes emails, reports, or proposals for a living.",
+    summary:
+      "Build faster, clearer work habits using AI for writing, summarizing, and planning without losing quality.",
+    duration: "8 hours",
+    format: "Online or in-person",
+    skills: [
+      "Business Writing",
+      "Document Summarising",
+      "Weekly Planning",
+      "Prompt Libraries",
+    ],
+    bonus: "Professional Certificate of Competence in Applied AI Systems, verifiable online",
+    detail: "Level: Beginner-friendly | Schedule: 4 weekly sessions or 2 half-days",
+    imageUrl: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600&h=400&fit=crop&q=80",
+  },
+  {
+    title: "AI for Small Business & Entrepreneurs",
+    badge: "ENROLLING NOW",
+    relatedService: "Artificial Intelligence",
+    builtFor: "Business owners, entrepreneurs, informal traders.",
+    summary:
+      "Use AI to support marketing, communication, pricing, bookkeeping, and funding proposals on a realistic budget.",
+    duration: "8 hours",
+    format: "Online or in-person",
+    skills: [
+      "Marketing on a Budget",
+      "Customer Communication",
+      "Pricing & Bookkeeping",
+      "Funding Proposals",
+    ],
+    bonus: "Professional Certificate of Competence in Applied AI Systems, verifiable online",
+    detail: "Level: Beginner-friendly | Schedule: 4 weekly sessions or 2 half-days",
+    imageUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop&q=80",
+  },
+  {
+    title: "AI Project Management",
+    badge: "ENROLLING NOW",
+    relatedService: "Artificial Intelligence",
+    builtFor: "Team leads, project managers, operations staff, agencies.",
+    summary:
+      "Apply AI to planning, status reporting, coordination, and workflow automation without needing advanced technical skills.",
+    duration: "8 hours",
+    format: "Online or in-person",
+    skills: [
+      "Project Setup",
+      "Workflow Automation",
+      "Status Reporting",
+      "Team Coordination",
+    ],
+    bonus: "Professional Certificate of Competence in Applied AI Systems, verifiable online",
+    detail: "Level: Beginner-friendly, no ClickUp experience needed | Schedule: 4 weekly sessions or 2 half-days",
+    imageUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop&q=80",
+  },
+  {
+    title: "AI for Educators",
+    badge: "ENROLLING NOW",
+    relatedService: "Artificial Intelligence",
+    builtFor: "Primary and secondary school teachers, tutors, education administrators.",
+    summary:
+      "Use AI to save time on planning, differentiated instruction, worksheets, and support while keeping teaching human-centered.",
+    duration: "8 hours",
+    format: "Online or in-person",
+    skills: [
+      "Lesson Planning",
+      "Quiz & Worksheet Creation",
+      "Differentiated Instruction",
+      "Grading Support",
+    ],
+    bonus: "Professional Certificate of Competence in Applied AI Systems, verifiable online",
+    detail: "Level: Beginner-friendly | Schedule: 4 weekly sessions or 2 half-days",
+    imageUrl: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop&q=80",
+  },
+  {
+    title: "AI for Business Operations",
+    badge: "NEW",
+    relatedService: "Artificial Intelligence",
+    builtFor: "Managers, admin and operations staff, and business owners starting from zero.",
+    summary:
+      "Learn to use AI assistants to take routine work off your team's plate, with clear rules for accuracy, privacy, and responsible use.",
+    duration: "3 sessions",
+    format: "Live online coaching",
+    skills: [
+      "Write prompts that produce usable first drafts",
+      "Check AI output before it reaches a customer or a report",
+      "Set a simple team policy for what can go into an AI tool",
+      "Build a reusable prompt library for your recurring tasks",
+    ],
+    sessions: [
+      "Session 1: How AI assistants work, and where they fail",
+      "Session 2: Prompting for real tasks: emails, reports, summaries, planning",
+      "Session 3: Verification, privacy, and your team's AI-use policy",
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop&q=80",
+  },
+  {
+    title: "Digital Transformation for SMEs",
+    badge: "NEW",
+    relatedService: "Digital Transformation",
+    builtFor: "Owners and managers of small and mid-sized businesses.",
+    summary:
+      "A practical route from paper and spreadsheets to systems that scale, without buying software you don't need.",
+    duration: "3 sessions",
+    format: "Live online workshop",
+    skills: [
+      "Map how work actually flows through your business",
+      "Pick the highest-value processes to fix first",
+      "Compare systems and vendors with a simple scorecard",
+      "Leave with a 90-day improvement roadmap",
+    ],
+    sessions: [
+      "Session 1: Mapping your current processes",
+      "Session 2: Choosing and sequencing improvements",
+      "Session 3: Rollout, change management, and measuring results",
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop&q=80",
+  },
+  {
+    title: "Cybersecurity Awareness for Teams",
+    badge: "NEW",
+    relatedService: "Cyber Security",
+    builtFor: "Whole teams, from front desk to executives. No technical background needed.",
+    summary:
+      "Give every person on your team the habits that help prevent the most common attacks: phishing, weak passwords, and careless data handling.",
+    duration: "3 sessions",
+    format: "Live online training",
+    skills: [
+      "Recognize phishing messages and common scams",
+      "Set up strong passwords and multi-factor authentication",
+      "Handle customer and company data safely, including on personal devices",
+      "Know what to do in the first hour after an incident",
+    ],
+    sessions: [
+      "Session 1: How attacks actually happen",
+      "Session 2: Accounts, devices, and data handling",
+      "Session 3: Incident response and building a security culture",
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop&q=80",
+  },
+  {
+    title: "Data & Dashboards for Managers",
+    badge: "NEW",
+    relatedService: "Data & Business Intelligence",
+    builtFor: "Managers, finance, and operations staff who work with spreadsheets regularly.",
+    summary:
+      "Turn the numbers you already collect into reports and dashboards that support real decisions.",
+    duration: "3 sessions",
+    format: "Live online learning",
+    skills: [
+      "Choose KPIs that match your goals",
+      "Clean and structure data in a spreadsheet",
+      "Build a simple dashboard in Excel or Power BI",
+      "Present findings clearly to decision-makers",
+    ],
+    sessions: [
+      "Session 1: Choosing metrics that matter",
+      "Session 2: Preparing and analyzing your data",
+      "Session 3: Building and presenting a dashboard",
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&q=80",
+  },
+  {
+    title: "Tender & Proposal Writing",
+    badge: "NEW",
+    relatedService: "Business Development & Consulting",
+    builtFor: "Business owners, sales and bid teams, and NGOs applying for contracts or funding.",
+    summary:
+      "Learn how strong bids are structured, and build a reusable proposal toolkit for your business.",
+    duration: "3 sessions",
+    format: "Live online workshop",
+    skills: [
+      "Read a tender document and extract every requirement",
+      "Structure a clear, compliant technical response",
+      "Price and present your offer with confidence",
+      "Build a reusable library of proposal sections",
+    ],
+    sessions: [
+      "Session 1: Reading the tender and planning your response",
+      "Session 2: Writing the technical and commercial response",
+      "Session 3: Review, compliance checks, and submission",
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop&q=80",
+  },
+  {
+    title: "Master Claude: From First Prompt to Power User",
+    badge: "ENROLLING NOW",
+    relatedService: "Artificial Intelligence",
+    builtFor: "Anyone who wants to go deep on one tool rather than skim many.",
+    summary:
+      "Move beyond basic prompting to real workflows, document analysis, and custom usage patterns with Claude.",
+    duration: "Single half-day session · 4 hours",
+    format: "Online or in-person",
+    skills: [
+      "Advanced Prompting",
+      "Projects & Artifacts",
+      "Document Analysis",
+      "Custom Workflows",
+    ],
+    bonus: "Professional Certificate of Competence in Applied AI Systems, verifiable online",
+    detail: "Level: Best with some AI experience already",
+    imageUrl: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=400&fit=crop&q=80",
+  },
+  {
+    title: "AI for Designers",
+    badge: "ENROLLING NOW",
+    relatedService: "Artificial Intelligence",
+    builtFor: "Graphic designers, brand & creative teams.",
+    summary:
+      "Use AI to speed up ideation, mockups, and design iteration while keeping your own creative judgment at the center.",
+    duration: "Single session · 2 hours",
+    format: "Online or in-person",
+    skills: [
+      "Design Ideation",
+      "Rapid Mockups",
+      "AI Image Tools",
+      "Using an AI assistant for design ideation and iteration",
+      "Other AI design tools worth knowing",
+      "Speeding up mockups and concepts",
+      "Where AI helps, and where your own eye still matters most",
+    ],
+    bonus: "Certificate: Attendance",
+    imageUrl: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=600&h=400&fit=crop&q=80",
+  },
+  {
+    title: "AI Video & Movie Creation",
+    badge: "ENROLLING NOW",
+    relatedService: "Artificial Intelligence",
+    builtFor: "Content creators, marketers, filmmakers.",
+    summary:
+      "Learn how AI can support scripts, video generation, and editing for faster concept-to-output workflows.",
+    duration: "Single session · 2 hours",
+    format: "Online or in-person",
+    skills: [
+      "AI Scripting",
+      "AI Video Generation",
+      "Editing Basics",
+      "Scripting with AI assistance",
+      "Turning an idea into short AI-generated video",
+      "Editing and refining AI video output",
+      "A realistic view of what today’s tools can and can’t do",
+    ],
+    bonus: "Certificate: Attendance",
+    imageUrl: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=600&h=400&fit=crop&q=80",
+  },
+  {
+    title: "AI for Social Media & Content Creators",
+    badge: "ENROLLING NOW",
+    relatedService: "Artificial Intelligence",
+    builtFor: "Social media managers, marketers, small business owners.",
+    summary:
+      "Build faster content systems with AI for captions, planning, visuals, and short-form social output.",
+    duration: "Single session · 2 hours",
+    format: "Online or in-person",
+    skills: [
+      "Caption Writing",
+      "Content Calendars",
+      "Quick Graphics",
+      "Captions and post copy in your own brand voice",
+      "Building a month of content in an afternoon",
+      "Quick graphics and short video for posts",
+      "Staying consistent without burning out",
+    ],
+    bonus: "Certificate: Attendance",
+    imageUrl: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=600&h=400&fit=crop&q=80",
+  },
+  {
+    title: "AI for Writers",
+    badge: "ENROLLING NOW",
+    relatedService: "Artificial Intelligence",
+    builtFor: "Content writers, communications teams, students.",
+    summary:
+      "Create stronger first drafts, speed up research, and keep your own voice while improving consistency and quality.",
+    duration: "Single session · 2 hours",
+    format: "Online or in-person",
+    skills: [
+      "Drafting",
+      "Editing",
+      "Research",
+      "Drafting faster without losing your voice",
+      "Editing and tightening your own writing",
+      "Research and fact-gathering with AI",
+      "Avoiding the “obviously AI-written” trap",
+    ],
+    bonus: "Certificate: Attendance",
+    imageUrl: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop&q=80",
+  },
+  {
+    title: "AI Music & Podcast Creation",
+    badge: "ENROLLING NOW",
+    relatedService: "Artificial Intelligence",
+    builtFor: "Musicians, podcasters, content creators.",
+    summary:
+      "Explore AI-assisted music and audio creation, voice work, and practical ways to use these tools in real projects.",
+    duration: "Single session · 2 hours",
+    format: "Online or in-person",
+    skills: [
+      "AI Music Generation",
+      "Voice & Narration",
+      "Audio Editing",
+      "Generating original music with AI tools",
+      "Voice, narration, and podcast editing basics",
+      "Where AI-made audio works well, and where it doesn’t",
+      "Practical use in ads, intros, and jingles",
+    ],
+    bonus: "Certificate: Attendance",
+    imageUrl: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=600&h=400&fit=crop&q=80",
+  },
+  {
+    title: "AI for Presentations & Pitch Decks",
+    badge: "ENROLLING NOW",
+    relatedService: "Artificial Intelligence",
+    builtFor: "Anyone who pitches, presents, or reports to others.",
+    summary:
+      "Turn rough ideas into structured, memorable decks with AI support for content, speaker notes, and design.",
+    duration: "Single session · 2 hours",
+    format: "Online or in-person",
+    skills: [
+      "Deck Structuring",
+      "Speaker Notes",
+      "Rapid Design",
+      "Structuring a presentation people actually remember",
+      "Building a deck in a fraction of the usual time",
+      "Using AI for talking points and speaker notes",
+      "Polishing a deck without losing your own voice",
+    ],
+    bonus: "Certificate: Attendance",
+    imageUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop&q=80",
+  },
+  {
+    title: "AI for Spreadsheets & Reports",
+    badge: "ENROLLING NOW",
+    relatedService: "Artificial Intelligence",
+    builtFor: "Finance, admin, and operations teams.",
+    summary:
+      "Use AI to summarize data, spot trends, and turn raw spreadsheets into clearer reporting workflows.",
+    duration: "Single session · 2 hours",
+    format: "Online or in-person",
+    skills: [
+      "Data Summarising",
+      "Trend Spotting",
+      "Report Templates",
+      "Turning raw data into clear reports, faster",
+      "Spotting trends without wading through spreadsheets by hand",
+      "Simple, repeatable steps you can reuse every reporting cycle",
+    ],
+    bonus: "Certificate: Attendance",
+    imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&q=80",
+  },
+];
+
+const WORKSHOPS = [
+  {
+    title: "Spreadsheet to System: Automating Repetitive Work",
+    relatedService: "Technology Solutions",
+    builtFor: "Operations, admin, and finance teams doing the same task every week.",
+    summary:
+      "Find the tasks worth automating, and learn when built-in tools are enough and when custom software pays off.",
+    duration: "90-minute live online session",
+    level: "Beginner-friendly",
+    takeaway: "Take-home checklist",
+    skills: [
+      "Spot the repetitive tasks with the biggest payoff",
+      "Use automation already built into tools you own",
+      "Decide when custom software is worth the investment",
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop&q=80",
+  },
+  {
+    title: "Cloud Collaboration with Microsoft 365 & Google Workspace",
+    relatedService: "Cloud Solutions",
+    builtFor: "Teams moving to, or already on, Microsoft 365 or Google Workspace.",
+    summary:
+      "Set up shared files, permissions, and backups so your team can work together from anywhere without losing track of anything.",
+    duration: "90-minute live online session",
+    level: "Beginner-friendly",
+    takeaway: "Take-home checklist",
+    skills: [
+      "Structure shared folders and permissions",
+      "Run meetings, chat, and shared documents smoothly",
+      "Share files securely and keep reliable backups",
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop&q=80",
+  },
+  {
+    title: "Your Business Website: What It Needs to Bring in Customers",
+    relatedService: "Digital Solutions",
+    builtFor: "Business owners and marketing staff planning or improving a website.",
+    summary:
+      "The pages, messaging, and search basics that turn a website from a brochure into a source of inquiries.",
+    duration: "90-minute live online session",
+    level: "Beginner-friendly",
+    takeaway: "Take-home checklist",
+    skills: [
+      "Structure pages around what visitors want to know",
+      "Cover the search (SEO) basics that matter most",
+      "Track visits and inquiries so you can improve",
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&q=80",
+  },
+  {
+    title: "Getting Value from Fleet Tracking",
+    relatedService: "Fleet & Smart Technology",
+    builtFor: "Fleet owners, transport and logistics operators, and asset managers.",
+    summary:
+      "Choose the right tracking setup, then use the data to cut costs, improve safety, and keep vehicles and assets accounted for.",
+    duration: "90-minute live online session",
+    level: "Beginner-friendly",
+    takeaway: "Take-home checklist",
+    skills: [
+      "Choose tracking hardware and software for your fleet",
+      "Read location, fuel, and driver-behavior reports",
+      "Set alerts and boundaries, and act on what the data shows",
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&h=400&fit=crop&q=80",
+  },
+  {
+    title: "AI Chatbots for Customer Service (new)",
+    relatedService: "Artificial Intelligence",
+    builtFor: "Business owners and customer service or sales teams who answer the same customer questions every day on WhatsApp, email, or their website.",
+    summary:
+      "Learn how a chatbot can handle your most common customer questions, and plan one that sounds like your business.",
+    duration: "90-minute live online session",
+    level: "Beginner-friendly",
+    takeaway: "Take-home checklist",
+    skills: [
+      "List the questions a chatbot should handle, and the ones it should not",
+      "Write clear, on-brand answers a chatbot can use",
+      "Decide when a customer must be handed over to a person",
+      "Measure whether the chatbot is actually helping",
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&h=400&fit=crop&q=80",
   },
 ];
 
@@ -168,6 +631,15 @@ export default function AiTraining({ setPage }) {
   const go = (id) => {
     setPage(id);
     window.scrollTo(0, 0);
+  };
+
+  const handleLearnMore = (serviceTitle) => {
+    const message = `Hi Calvelo,\n\nI would like to learn more about ${serviceTitle} on the AI & Applied Training page. Please share more details, including the format, schedule, and what this training would involve for our team.\n\nThank you.`;
+    window.sessionStorage.setItem(
+      "calveloServiceLead",
+      JSON.stringify({ service: serviceTitle, page: "AI & Applied Training", message })
+    );
+    go("contact");
   };
 
   return (
@@ -388,15 +860,15 @@ export default function AiTraining({ setPage }) {
           <div style={{ marginBottom: 48 }}>
             <SectionLabel
               eyebrow="Training Programs"
-              title="Three pathways to AI mastery."
-              sub="Each program is designed for specific roles and objectives. Choose the path that matches your team's needs and experience level."
+              title="Curated learning paths for modern teams."
+              sub="From operational AI to digital transformation, cybersecurity, and data literacy, every program is designed to help leaders and teams build practical capability with measurable impact."
             />
           </div>
           <div
             style={{
               "--rg-base": "1fr",
-              "--rg-md": "1fr",
-              "--rg-lg": "repeat(3, 1fr)",
+              "--rg-md": "repeat(2, minmax(0, 1fr))",
+              "--rg-lg": "repeat(3, minmax(0, 1fr))",
               "--rg-gap": "28px",
             }}
             className="rgrid"
@@ -405,15 +877,16 @@ export default function AiTraining({ setPage }) {
               <div
                 key={i}
                 style={{
-                  background: C.paper,
-                  border: `1px solid ${C.paperDim}`,
-                  borderRadius: 16,
+                  background: "linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(239,247,247,0.96) 100%)",
+                  border: `1px solid rgba(21, 99, 110, 0.14)`,
+                  borderRadius: 18,
                   overflow: "hidden",
                   display: "flex",
                   flexDirection: "column",
+                  boxShadow: "0 12px 40px rgba(15, 23, 42, 0.06)",
+                  transition: "all 0.25s ease",
                 }}
               >
-                {/* Placeholder image */}
                 <div
                   style={{
                     width: "100%",
@@ -436,7 +909,6 @@ export default function AiTraining({ setPage }) {
                   />
                 </div>
 
-                {/* Content */}
                 <div
                   style={{
                     padding: 24,
@@ -458,26 +930,68 @@ export default function AiTraining({ setPage }) {
                     >
                       <h3
                         className="font-display"
-                        style={{ fontWeight: 700, fontSize: 18, color: C.ink, margin: 0 }}
+                        style={{
+                          fontWeight: 700,
+                          fontSize: 18,
+                          color: C.ink,
+                          margin: 0,
+                          lineHeight: 1.3,
+                        }}
                       >
                         {course.title}
                       </h3>
                       <span
                         className="font-mono"
                         style={{
-                          fontSize: 10,
+                          fontSize: 9,
                           fontWeight: 700,
-                          letterSpacing: "0.12em",
-                          color: C.teal,
+                          letterSpacing: "0.14em",
+                          color: C.ink,
+                          background: "linear-gradient(135deg, rgba(214,177,109,0.18), rgba(76,175,175,0.18))",
                           whiteSpace: "nowrap",
-                          padding: "4px 10px",
-                          border: `1px solid ${C.teal}`,
-                          borderRadius: 4,
+                          padding: "6px 10px",
+                          border: `1px solid rgba(21, 99, 110, 0.18)`,
+                          borderRadius: 999,
                         }}
                       >
                         {course.badge}
                       </span>
                     </div>
+                    <div
+                      className="font-mono"
+                      style={{
+                        fontSize: 10,
+                        letterSpacing: "0.1em",
+                        color: C.muted,
+                        marginBottom: 8,
+                      }}
+                    >
+                      RELATED SERVICE
+                    </div>
+                    <div
+                      className="font-body"
+                      style={{
+                        fontSize: 12,
+                        color: C.teal,
+                        marginBottom: 12,
+                        fontWeight: 600,
+                      }}
+                    >
+                      {course.relatedService}
+                    </div>
+                    {course.summary && (
+                      <p
+                        className="font-body"
+                        style={{
+                          fontSize: 13.5,
+                          color: C.muted,
+                          lineHeight: 1.55,
+                          margin: "0 0 12px 0",
+                        }}
+                      >
+                        {course.summary}
+                      </p>
+                    )}
                     <p
                       className="font-body"
                       style={{
@@ -487,7 +1001,7 @@ export default function AiTraining({ setPage }) {
                         margin: "0 0 12px 0",
                       }}
                     >
-                      <strong>Built for:</strong> {course.builtFor}
+                      <strong style={{ color: C.ink }}>Built for:</strong> {course.builtFor}
                     </p>
                     <div style={{ display: "flex", flexDirection: "column", gap: 4, fontSize: 12 }}>
                       <div style={{ color: C.text }}>
@@ -496,6 +1010,16 @@ export default function AiTraining({ setPage }) {
                       <div style={{ color: C.text }}>
                         <strong>Format:</strong> {course.format}
                       </div>
+                      {course.bonus && (
+                        <div style={{ color: C.text }}>
+                          <strong>Certificate:</strong> {course.bonus}
+                        </div>
+                      )}
+                      {course.detail && (
+                        <div style={{ color: C.text }}>
+                          {course.detail}
+                        </div>
+                      )}
                     </div>
                   </div>
 
@@ -510,7 +1034,7 @@ export default function AiTraining({ setPage }) {
                         marginBottom: 10,
                       }}
                     >
-                      SKILLS YOU'LL GAIN
+                      YOU WILL LEARN TO
                     </div>
                     <ul
                       style={{
@@ -533,13 +1057,198 @@ export default function AiTraining({ setPage }) {
                     </ul>
                   </div>
 
+                  {course.sessions && (
+                    <div>
+                      <div
+                        className="font-mono"
+                        style={{
+                          fontSize: 10,
+                          fontWeight: 700,
+                          letterSpacing: "0.1em",
+                          color: C.muted,
+                          marginBottom: 10,
+                        }}
+                      >
+                        SESSIONS
+                      </div>
+                      <ul
+                        style={{
+                          margin: 0,
+                          paddingLeft: 16,
+                          display: "flex",
+                          flexDirection: "column",
+                          gap: 6,
+                        }}
+                      >
+                        {course.sessions.map((session, idx) => (
+                          <li
+                            key={idx}
+                            className="font-body"
+                            style={{ fontSize: 12.5, color: C.text, lineHeight: 1.45 }}
+                          >
+                            {session}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
                   <Button
                     tone="gold"
                     size="sm"
-                    onClick={() => go("contact")}
+                    onClick={() => handleLearnMore(course.title)}
                     style={{ marginTop: "auto" }}
                   >
-                    Enroll Now
+                    Learn More
+                  </Button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Workshops Section */}
+      <section style={{ background: C.paper }}>
+        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "64px 24px" }}>
+          <div style={{ marginBottom: 48 }}>
+            <SectionLabel
+              eyebrow="Workshops"
+              title="Focused, practical sessions for teams in motion."
+              sub="Each live online workshop is designed for busy teams who need useful skills fast, with a beginner-friendly approach and a take-home checklist to keep momentum going."
+            />
+          </div>
+          <div
+            style={{
+              "--rg-base": "1fr",
+              "--rg-md": "repeat(2, 1fr)",
+              "--rg-lg": "repeat(3, 1fr)",
+              "--rg-gap": "24px",
+            }}
+            className="rgrid"
+          >
+            {WORKSHOPS.map((workshop, i) => (
+              <div
+                key={i}
+                style={{
+                  background: "linear-gradient(180deg, rgba(255,255,255,0.99) 0%, rgba(240,246,246,0.96) 100%)",
+                  border: `1px solid rgba(21, 99, 110, 0.14)`,
+                  borderRadius: 18,
+                  overflow: "hidden",
+                  display: "flex",
+                  flexDirection: "column",
+                  boxShadow: "0 8px 30px rgba(15, 23, 42, 0.04)",
+                }}
+              >
+                <div
+                  style={{
+                    width: "100%",
+                    paddingTop: "60%",
+                    position: "relative",
+                    background: `linear-gradient(135deg, ${C.teal}15, ${C.ink}15)`,
+                  }}
+                >
+                  <img
+                    src={workshop.imageUrl}
+                    alt={workshop.title}
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                    }}
+                  />
+                </div>
+                <div style={{ padding: 20, display: "flex", flexDirection: "column", gap: 12, flex: 1 }}>
+                  <div>
+                    <div
+                      className="font-mono"
+                      style={{
+                        fontSize: 10,
+                        letterSpacing: "0.1em",
+                        color: C.muted,
+                        marginBottom: 8,
+                      }}
+                    >
+                      {workshop.relatedService}
+                    </div>
+                    <h3
+                      className="font-display"
+                      style={{ fontWeight: 700, fontSize: 18, color: C.ink, margin: 0, lineHeight: 1.3 }}
+                    >
+                      {workshop.title}
+                    </h3>
+                  </div>
+                  <p
+                    className="font-body"
+                    style={{
+                      fontSize: 13.5,
+                      color: C.muted,
+                      lineHeight: 1.5,
+                      margin: 0,
+                    }}
+                  >
+                    <strong style={{ color: C.ink }}>Built for:</strong> {workshop.builtFor}
+                  </p>
+                  <p
+                    className="font-body"
+                    style={{
+                      fontSize: 13.5,
+                      color: C.text,
+                      lineHeight: 1.5,
+                      margin: 0,
+                    }}
+                  >
+                    {workshop.summary}
+                  </p>
+                  <div className="font-body" style={{ fontSize: 12, color: C.text, lineHeight: 1.6 }}>
+                    <div>
+                      <strong>Format:</strong> {workshop.duration}
+                    </div>
+                    <div>
+                      <strong>Level:</strong> {workshop.level}
+                    </div>
+                    <div>
+                      <strong>Take-away:</strong> {workshop.takeaway}
+                    </div>
+                  </div>
+                  <div>
+                    <div
+                      className="font-mono"
+                      style={{
+                        fontSize: 10,
+                        fontWeight: 700,
+                        letterSpacing: "0.1em",
+                        color: C.muted,
+                        marginBottom: 8,
+                      }}
+                    >
+                      YOU WILL LEARN TO
+                    </div>
+                    <ul
+                      style={{
+                        margin: 0,
+                        paddingLeft: 16,
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: 6,
+                      }}
+                    >
+                      {workshop.skills.map((skill, idx) => (
+                        <li
+                          key={idx}
+                          className="font-body"
+                          style={{ fontSize: 12.5, color: C.text, lineHeight: 1.5 }}
+                        >
+                          {skill}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <Button tone="gold" size="sm" onClick={() => handleLearnMore(workshop.title)} style={{ marginTop: "auto" }}>
+                    Learn More
                   </Button>
                 </div>
               </div>
