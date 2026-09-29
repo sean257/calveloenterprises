@@ -1,13 +1,21 @@
-import { Mail, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Mail, Facebook, Instagram } from "lucide-react";
 import { C } from "../theme";
 import { NAV, CONTACT } from "../data";
 import Logo from "./Logo";
 
 const SOCIALS = [
-  { key: "facebook", label: "Facebook", href: "#", Icon: Facebook },
-  { key: "instagram", label: "Instagram", href: "#", Icon: Instagram },
-  { key: "linkedin", label: "LinkedIn", href: "#", Icon: Linkedin },
-  { key: "twitter", label: "X / Twitter", href: "#", Icon: Twitter },
+  {
+    key: "facebook",
+    label: "Facebook",
+    href: "https://www.facebook.com/share/1HNM96R1xb/?mibextid=wwXIfr",
+    Icon: Facebook,
+  },
+  {
+    key: "instagram",
+    label: "Instagram",
+    href: "https://www.instagram.com/calvelo.enterprises/",
+    Icon: Instagram,
+  },
 ];
 
 export default function Footer({ setPage }) {
@@ -110,7 +118,8 @@ export default function Footer({ setPage }) {
                   href={href}
                   aria-label={label}
                   title={label}
-                  onClick={(event) => event.preventDefault()}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="foc"
                   style={{
                     display: "inline-flex",
