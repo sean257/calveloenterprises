@@ -30,7 +30,7 @@ const TRAINING_COURSES = [
     badge: "ENROLLING NOW",
     relatedService: "Artificial Intelligence",
     builtFor:
-      "Teams who write, analyze, communicate, and solve problems — anyone ready to use AI in daily work.",
+      "Teams who write, analyze, communicate, and solve problems, as well as anyone ready to use AI in daily work.",
     summary:
       "Hands-on training focused on applying AI tools to everyday business tasks with confidence and control.",
     duration: "6 weeks | 3 hours/week",
@@ -573,7 +573,7 @@ const AI_SERVICES = [
     icon: Sparkles,
     title: "Prompt Engineering & Tool Mastery",
     description:
-      "Advanced skills for getting the best results from AI tools—from ChatGPT and Claude to specialized industry-specific platforms.",
+      "Advanced skills for getting the best results from AI tools, from ChatGPT and Claude to specialized industry-specific platforms.",
     highlights: ["Advanced techniques", "Tool ecosystem", "Output optimization"],
   },
   {
@@ -587,14 +587,14 @@ const AI_SERVICES = [
     icon: Users,
     title: "Organizational AI Adoption",
     description:
-      "Full-cycle support for embedding AI into your culture, processes, and systems—from change management to scaling implementation.",
+      "Full-cycle support for embedding AI into your culture, processes, and systems, from change management to scaling implementation.",
     highlights: ["Change management", "Adoption support", "Scaling strategies"],
   },
   {
     icon: Shield,
     title: "AI Governance & Responsible AI",
     description:
-      "Establish guardrails for safe, ethical AI use—including compliance, bias detection, risk management, and organizational AI policies.",
+      "Establish guardrails for safe, ethical AI use, including compliance, bias detection, risk management, and organizational AI policies.",
     highlights: ["Risk framework", "Compliance", "Ethical guidelines"],
   },
 ];
@@ -650,7 +650,7 @@ export default function AiTraining({ setPage }) {
             dark
             eyebrow="AI & Applied Training"
             title="Build AI capability that delivers measurable business value."
-            sub="Practical training programs designed to empower your team with the knowledge, skills, and confidence to use AI strategically — from C-suite to operations."
+            sub="Practical training programs designed to empower your team with the knowledge, skills, and confidence to use AI strategically, from C-suite to operations."
           />
         </div>
       </AnimatedDarkSection>
@@ -661,7 +661,7 @@ export default function AiTraining({ setPage }) {
           <div style={{ marginBottom: 40 }}>
             <SectionLabel
               eyebrow="Why AI Matters Now"
-              title="AI is not a future technology—it's reshaping how work gets done today."
+              title="AI is not a future technology. It's reshaping how work gets done today."
               sub="Organizations that equip their teams with AI skills are moving faster, making better decisions, and pulling ahead of the competition. The question isn't whether to adopt AI, but how quickly you can build the capability to do it right."
             />
           </div>
@@ -712,7 +712,7 @@ export default function AiTraining({ setPage }) {
           <div style={{ marginBottom: 48 }}>
             <SectionLabel
               eyebrow="Our AI Services Ecosystem"
-              title="Beyond training—comprehensive AI solutions."
+              title="Beyond training: comprehensive AI solutions."
               sub="We offer a full suite of AI services to help you identify opportunities, implement solutions, and govern AI responsibly across your organization."
             />
           </div>
@@ -1315,7 +1315,7 @@ export default function AiTraining({ setPage }) {
             <SectionLabel
               eyebrow="Our Approach"
               title="How we build lasting AI capability."
-              sub="We don't just teach theory—we build practical skills through real challenges, live demonstrations, and ongoing support."
+              sub="We don't just teach theory. We build practical skills through real challenges, live demonstrations, and ongoing support."
             />
           </div>
           <div

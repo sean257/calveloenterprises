@@ -10,17 +10,17 @@ export default function Privacy() {
         we collect through this website, how we use it, and the choices you have.
       </LegalSection>
       <LegalSection title="Information we collect">
-        <strong>Information you give us</strong> — such as your name, email address, phone number,
+        <strong>Information you give us</strong>, such as your name, email address, phone number,
         and message content when you submit a contact form or email us directly.
         <br />
         <br />
-        <strong>Information collected automatically</strong> — such as your IP address, browser
+        <strong>Information collected automatically</strong>, such as your IP address, browser
         type, device information, and pages visited, typically gathered through standard website
         analytics and log files.
       </LegalSection>
       <LegalSection title="How we use your information">
         We use the information we collect to respond to enquiries, provide quotes or proposals,
-        deliver services you've requested, improve this website, and — where you've agreed to it —
+        deliver services you've requested, improve this website, and, where you've agreed to it,
         send occasional updates about our services. We do not sell your personal information.
       </LegalSection>
       <LegalSection title="Sharing of information">

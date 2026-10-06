@@ -10,11 +10,11 @@ export default function Terms() {
       </LegalSection>
       <LegalSection title="Use of this website">
         This website is provided for general information about Calvelo's services. You agree not to
-        misuse the site — including attempting unauthorized access, disrupting its operation, or
+        misuse the site, including attempting unauthorized access, disrupting its operation, or
         scraping content without permission.
       </LegalSection>
       <LegalSection title="Intellectual property">
-        The content on this site — including text, graphics, logos, and design — belongs to Calvelo
+        The content on this site, including text, graphics, logos, and design, belongs to Calvelo
         Enterprises or its licensors, unless stated otherwise, and may not be reproduced without
         permission.
       </LegalSection>

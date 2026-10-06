@@ -37,7 +37,7 @@ export default function Contact() {
 
     const serviceName = lead?.service || "a service";
     const subject = encodeURIComponent(`Enquiry: ${serviceName}`);
-    const body = encodeURIComponent(`${form.message || lead?.message || ""}\n\n— ${form.name} (${form.email})`);
+    const body = encodeURIComponent(`${form.message || lead?.message || ""}\n\n${form.name} (${form.email})`);
     window.location.href = `mailto:${CONTACT.email}?subject=${subject}&body=${body}`;
   };
   const inputStyle = {
@@ -59,7 +59,7 @@ export default function Contact() {
             dark
             eyebrow="Contact"
             title="Let's talk about what's next."
-            sub="Tell us a bit about your business and what you're trying to solve — we'll get back to you."
+            sub="Tell us a bit about your business and what you're trying to solve. We'll get back to you."
           />
         </div>
       </AnimatedDarkSection>

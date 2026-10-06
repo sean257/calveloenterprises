@@ -94,7 +94,7 @@ export default function Home({ setPage }) {
             },
             {
               t: "Built to scale",
-              d: "Practical solutions designed to grow with you — from one market to many.",
+              d: "Practical solutions designed to grow with you, from one market to many.",
             },
           ].map((p, i) => (
             <div key={i} style={{ padding: "8px 0" }}>
@@ -131,8 +131,8 @@ export default function Home({ setPage }) {
         >
           <SectionLabel
             eyebrow="About Calvelo"
-            title="We don't simply provide technology — we solve business problems."
-            sub="We're a business consulting and technology solutions firm helping organizations improve performance, cut costs, and modernize the way they work. From strategy through execution, we partner with you end to end — identifying opportunities, designing practical solutions, and implementing the technology to support them."
+            title="We don't simply provide technology; we solve business problems."
+            sub="We're a business consulting and technology solutions firm helping organizations improve performance, cut costs, and modernize the way they work. From strategy through execution, we partner with you end to end, identifying opportunities, designing practical solutions, and implementing the technology to support them."
           />
           <div>
             <Button tone="outlineInk" onClick={() => go("about")}>
@@ -338,7 +338,7 @@ export default function Home({ setPage }) {
               Let's build what's next.
             </h2>
             <p className="font-body" style={{ color: C.mutedOnDark, fontSize: 15 }}>
-              Tell us about the problem you're solving — we'll help you find the fastest way there.
+              Tell us about the problem you're solving. We'll help you find the fastest way there.
             </p>
           </div>
           <Button tone="gold" size="lg" onClick={() => go("contact")}>

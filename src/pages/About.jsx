@@ -49,7 +49,7 @@ export default function About({ setPage }) {
             <Eyebrow>Vision</Eyebrow>
             <p className="font-body" style={{ fontSize: 15.5, color: C.text, lineHeight: 1.75 }}>
               To be a trusted partner in business development, digital transformation, and
-              technology-driven innovation — empowering organizations everywhere to achieve
+              technology-driven innovation, empowering organizations everywhere to achieve
               sustainable growth and lasting success.
             </p>
           </div>
@@ -57,7 +57,7 @@ export default function About({ setPage }) {
             <Eyebrow>Mission</Eyebrow>
             <p className="font-body" style={{ fontSize: 15.5, color: C.white, lineHeight: 1.75 }}>
               To empower businesses through strategic consulting, innovative technology solutions,
-              and operational excellence — delivering measurable value, enhancing competitiveness,
+              and operational excellence, delivering measurable value, enhancing competitiveness,
               and creating sustainable business growth. We build long-term partnerships by
               delivering practical, results-oriented solutions.
             </p>
