@@ -52,8 +52,9 @@ export default function Home({ setPage }) {
                 marginBottom: 32,
               }}
             >
-              Calvelo partners with organizations to solve operational challenges, modernize
-              systems, and build technology that people actually use.
+              Based in Harare, Calvelo provides business consulting in Zimbabwe, technology
+              solutions, and digital transformation to help organizations solve operational
+              challenges and grow.
             </p>
             <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
               <Button tone="gold" size="lg" onClick={() => go("contact")}>

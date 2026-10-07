@@ -116,7 +116,7 @@ export default function DigitalTransformation({ setPage }) {
             dark
             eyebrow="Digital Transformation"
             title="Turn process friction into smooth, scalable growth."
-            sub="We help businesses simplify operations, strengthen visibility, and implement the systems that make growth sustainable and measurable."
+            sub="Digital transformation in Zimbabwe, including business process automation in Harare, workflow automation, cloud migration, and consulting to modernize operations."
           />
         </div>
       </AnimatedDarkSection>

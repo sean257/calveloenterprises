@@ -37,24 +37,81 @@ const SITE_URL = "https://calveloenterprises.com";
 
 const META = {
   home: {
-    title: "Calvelo Business Development | From Strategy to Solution",
+    title: "Business Consulting Zimbabwe | Calvelo Enterprises",
     description:
-      "Calvelo Business Development helps organizations improve performance, streamline operations, and embrace digital transformation with practical business and technology solutions.",
+      "Business consulting in Zimbabwe, technology solutions in Harare, digital transformation, IT consulting, and business development for growing organizations.",
+    keywords: [
+      "business consulting Zimbabwe",
+      "technology solutions Harare",
+      "digital transformation Zimbabwe",
+      "IT consulting Harare",
+      "business development company Zimbabwe",
+    ],
   },
   services: {
-    title: "Business Services | Calvelo",
+    title: "Business and Technology Services Zimbabwe | Calvelo",
     description:
-      "Explore Calvelo’s consulting, digital transformation, AI, cyber security, and technology solutions designed to improve business performance.",
+      "Business consulting services in Zimbabwe and IT services in Harare, including software development, technology consulting, cloud, cybersecurity, and digital solutions.",
+    keywords: [
+      "business consulting services Zimbabwe",
+      "IT services Harare",
+      "software development Zimbabwe",
+      "technology consulting Harare",
+      "ERP solutions Zimbabwe",
+      "CRM implementation Zimbabwe",
+      "system integration Zimbabwe",
+      "database development Harare",
+      "AI solutions Zimbabwe",
+      "AI chatbot for business",
+      "AI automation Harare",
+      "document automation",
+      "AI customer support",
+      "vehicle tracking Zimbabwe",
+      "GPS tracking Harare",
+      "fleet management Zimbabwe",
+      "asset tracking Zimbabwe",
+      "IoT solutions",
+      "cyber security Zimbabwe",
+      "cybersecurity consulting Harare",
+      "network security Zimbabwe",
+      "security assessment",
+      "data backup solutions Zimbabwe",
+      "SEO services Zimbabwe",
+      "digital marketing Harare",
+      "branding Zimbabwe",
+      "social media strategy Zimbabwe",
+      "online marketing company Harare",
+      "business intelligence Zimbabwe",
+      "Power BI dashboards Harare",
+      "KPI reporting",
+      "data analytics Zimbabwe",
+      "business dashboards",
+      "cloud solutions Zimbabwe",
+      "Microsoft 365 Zimbabwe",
+      "Google Workspace Harare",
+      "cloud migration Zimbabwe",
+      "backup and disaster recovery",
+    ],
   },
   industries: {
     title: "Industries We Serve | Calvelo",
     description:
-      "Learn how Calvelo supports organizations across logistics, healthcare, education, retail, government, and more with tailored digital and operational solutions.",
+      "Explore business solutions by industry in Zimbabwe, including technology for SMEs and consulting for mining and agriculture.",
+    keywords: [
+      "business solutions by industry Zimbabwe",
+      "technology for SMEs Zimbabwe",
+      "consulting for mining and agriculture Zimbabwe",
+    ],
   },
   about: {
-    title: "About Calvelo | Business Consulting & Technology",
+    title: "About Calvelo Enterprises | Harare Consulting Firm",
     description:
-      "Discover Calvelo’s mission, values, and approach to helping growing organizations improve operations, technology, and long-term business outcomes.",
+      "Meet Calvelo Enterprises, a Harare consulting firm and technology consulting company in Zimbabwe helping organizations improve business performance.",
+    keywords: [
+      "about Calvelo Enterprises",
+      "Harare consulting firm",
+      "technology consulting company Zimbabwe",
+    ],
   },
   faq: {
     title: "FAQ | Calvelo",
@@ -64,22 +121,67 @@ const META = {
   "ai-training": {
     title: "AI & Applied Training | Calvelo",
     description:
-      "Practical AI training programs for professionals, teams, and business leaders. Build AI capability across your organization with hands-on, applied learning.",
+      "AI training in Zimbabwe and business technology courses in Harare, with corporate training, cybersecurity awareness, AI automation, chatbots, and document automation.",
+    keywords: [
+      "AI solutions Zimbabwe",
+      "AI chatbot for business",
+      "AI automation Harare",
+      "document automation",
+      "AI customer support",
+      "AI training Zimbabwe",
+      "business technology courses Harare",
+      "cyber security awareness training Zimbabwe",
+      "corporate training Harare",
+    ],
   },
   "business-development": {
     title: "Business Development & Consulting | Calvelo",
     description:
-      "Strategic business development and consulting services to identify growth opportunities, optimize sales, and build commercial excellence.",
+      "Business consulting in Zimbabwe from business development consultants in Harare, with tender proposal writing, feasibility studies, and business strategy consulting.",
+    keywords: [
+      "business consulting Zimbabwe",
+      "business development consultants Harare",
+      "tender proposal writing Zimbabwe",
+      "feasibility study Zimbabwe",
+      "business strategy consulting",
+    ],
   },
   "digital-transformation": {
     title: "Digital Transformation Services | Calvelo",
     description:
-      "End-to-end digital transformation services including process automation, cloud migration, and AI integration for modern operations.",
+      "Digital transformation in Zimbabwe with business process and workflow automation, cloud migration, and consulting to modernize business operations.",
+    keywords: [
+      "digital transformation Zimbabwe",
+      "business process automation Harare",
+      "workflow automation Zimbabwe",
+      "cloud migration Zimbabwe",
+      "digital transformation consulting",
+      "website development Harare",
+      "web development Zimbabwe",
+      "e-commerce website Zimbabwe",
+      "web design company Harare",
+      "website redesign",
+      "custom software development Zimbabwe",
+      "software development company Harare",
+      "mobile app development Zimbabwe",
+      "API integration",
+      "bespoke software",
+      "software licensing Zimbabwe",
+      "Microsoft licences Harare",
+      "business antivirus Zimbabwe",
+      "software licence management",
+      "buy software licences Zimbabwe",
+    ],
   },
   contact: {
-    title: "Contact Calvelo | Get in Touch",
+    title: "Contact Calvelo Enterprises | Harare Business Consultants",
     description:
-      "Contact Calvelo to discuss your business challenges, digital transformation goals, and customized consulting or technology solutions.",
+      "Contact Calvelo Enterprises to reach business consultants in Harare and discuss IT services, digital transformation, or technology solutions.",
+    keywords: [
+      "contact Calvelo Enterprises",
+      "business consultants Harare",
+      "IT company Harare contact",
+    ],
   },
   privacy: {
     title: "Privacy Policy | Calvelo",
@@ -146,6 +248,18 @@ export default function App() {
       document.head.appendChild(descriptionTag);
     }
     descriptionTag.setAttribute("content", meta.description);
+
+    let keywordsTag = document.querySelector('meta[name="keywords"]');
+    if (meta.keywords) {
+      if (!keywordsTag) {
+        keywordsTag = document.createElement("meta");
+        keywordsTag.name = "keywords";
+        document.head.appendChild(keywordsTag);
+      }
+      keywordsTag.setAttribute("content", meta.keywords.join(", "));
+    } else {
+      keywordsTag?.remove();
+    }
 
     const canonicalUrl = `${SITE_URL}${PAGE_TO_PATH[page] || "/"}`;
     let canonicalTag = document.querySelector('link[rel="canonical"]');

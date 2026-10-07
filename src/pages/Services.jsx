@@ -26,7 +26,7 @@ export default function Services({ setPage }) {
             dark
             eyebrow="Services"
             title="Business strategy and technology, under one roof."
-            sub="Nine practice areas, one team. Whichever problem you're solving, we can carry it from plan to production."
+            sub="Explore business consulting services in Zimbabwe and IT services in Harare, from software development and cloud solutions to cybersecurity, AI, and digital transformation."
           />
         </div>
       </AnimatedDarkSection>

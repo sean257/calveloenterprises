@@ -650,7 +650,7 @@ export default function AiTraining({ setPage }) {
             dark
             eyebrow="AI & Applied Training"
             title="Build AI capability that delivers measurable business value."
-            sub="Practical training programs designed to empower your team with the knowledge, skills, and confidence to use AI strategically, from C-suite to operations."
+            sub="AI training in Zimbabwe and business technology courses in Harare, with practical corporate training to help teams use AI confidently, from C-suite to operations."
           />
         </div>
       </AnimatedDarkSection>

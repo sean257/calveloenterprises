@@ -59,7 +59,7 @@ export default function Contact() {
             dark
             eyebrow="Contact"
             title="Let's talk about what's next."
-            sub="Tell us a bit about your business and what you're trying to solve. We'll get back to you."
+            sub="Contact Calvelo Enterprises to speak with business consultants in Harare about IT services, digital transformation, and technology solutions."
           />
         </div>
       </AnimatedDarkSection>

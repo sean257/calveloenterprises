@@ -13,7 +13,7 @@ export default function Industries() {
             dark
             eyebrow="Industries"
             title="Where we work."
-            sub="From logistics fleets to government ministries, our clients span nearly every sector of the economy."
+            sub="We provide business solutions by industry in Zimbabwe, including technology for SMEs and consulting for mining and agriculture, as well as logistics, healthcare, education, retail, and government."
           />
         </div>
       </AnimatedDarkSection>

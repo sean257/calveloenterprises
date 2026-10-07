@@ -67,7 +67,7 @@ export default function BusinessDevelopment({ setPage }) {
             dark
             eyebrow="Business Development & Consulting"
             title="Commercial strategy built for growth, clarity, and measurable traction."
-            sub="Strategic consulting services designed to help organizations identify opportunities, optimize operations, and accelerate sustainable growth."
+            sub="Business consulting in Zimbabwe and business development consultants in Harare provide strategy, tender proposal writing, feasibility studies, and support for sustainable growth."
           />
         </div>
       </AnimatedDarkSection>

@@ -20,7 +20,7 @@ export default function About({ setPage }) {
             dark
             eyebrow="About Calvelo"
             title="From strategy to solution."
-            sub="Calvelo Business Development is a business consulting and technology solutions firm dedicated to helping organizations improve performance, increase efficiency, embrace digital transformation, and achieve sustainable growth. We partner with businesses to identify opportunities, solve operational challenges, implement modern technologies, and develop practical strategies that improve productivity and profitability."
+            sub="Calvelo Enterprises is a Harare consulting firm and technology consulting company in Zimbabwe. We help organizations improve performance, increase efficiency, embrace digital transformation, and achieve sustainable growth through practical strategies and modern technologies."
           />
         </div>
       </AnimatedDarkSection>
