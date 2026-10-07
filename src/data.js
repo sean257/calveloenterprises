@@ -310,6 +310,6 @@ export const PROCESS = [
 
 export const CONTACT = {
   phone: "+263 780 800 757",
-  email: "calveloenterprises@gmail.com",
+  email: "sales@calveloenterprises.com",
   address: "41 Leopold Takawira Avenue",
 };

@@ -208,7 +208,7 @@ const localBusinessSchema = {
     addressCountry: "ZW",
   },
   telephone: "+263780800757",
-  email: "calveloenterprises@gmail.com",
+  email: "sales@calveloenterprises.com",
   sameAs: [],
 };
 
