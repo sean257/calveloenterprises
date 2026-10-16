@@ -36,7 +36,7 @@ export default function Button({
       onMouseEnter={(e) => (e.currentTarget.style.transform = "translateY(-2px)")}
       onMouseLeave={(e) => (e.currentTarget.style.transform = "translateY(0)")}
     >
-      {children} <Icon size={16} />
+      {children} <Icon size={16} aria-hidden="true" />
     </button>
   );
 }

@@ -14,6 +14,7 @@ import Faq from "./pages/Faq";
 import AiTraining from "./pages/AiTraining";
 import BusinessDevelopment from "./pages/BusinessDevelopment";
 import DigitalTransformation from "./pages/DigitalTransformation";
+import CyberSecurity from "./pages/CyberSecurity";
 
 const PAGE_TO_PATH = {
   home: "/",
@@ -24,6 +25,7 @@ const PAGE_TO_PATH = {
   "ai-training": "/ai-training",
   "business-development": "/business-development",
   "digital-transformation": "/digital-transformation",
+  "cyber-security": "/cyber-security",
   contact: "/contact",
   privacy: "/privacy",
   terms: "/terms",
@@ -173,6 +175,11 @@ const META = {
       "buy software licences Zimbabwe",
     ],
   },
+  "cyber-security": {
+    title: "Cyber Security Services & Packages | Calvelo Business Development",
+    description:
+      "Explore Cyber Security services and packages, from risk assessments and endpoint protection to monitoring, recovery and compliance support.",
+  },
   contact: {
     title: "Contact Calvelo Enterprises | Harare Business Consultants",
     description:
@@ -310,6 +317,7 @@ export default function App() {
       {page === "ai-training" && <AiTraining setPage={updatePage} />}
       {page === "business-development" && <BusinessDevelopment setPage={updatePage} />}
       {page === "digital-transformation" && <DigitalTransformation setPage={updatePage} />}
+      {page === "cyber-security" && <CyberSecurity setPage={updatePage} />}
       {page === "contact" && <Contact />}
       {page === "privacy" && <Privacy />}
       {page === "terms" && <Terms />}

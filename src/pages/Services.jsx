@@ -16,6 +16,7 @@ export default function Services({ setPage }) {
     0: "business-development", // Business Development & Consulting
     1: "digital-transformation", // Digital Transformation
     3: "ai-training", // AI & Applied Training
+    5: "cyber-security", // Cyber Security
   };
 
   return (
@@ -79,7 +80,7 @@ export default function Services({ setPage }) {
                     onClick={() => navigate(servicePageMap[i])}
                     style={{ marginTop: 16, width: "100%" }}
                   >
-                    Learn More
+                    {i === 5 ? "View all cyber security services & packages" : "Learn More"}
                   </Button>
                 )}
               </div>
