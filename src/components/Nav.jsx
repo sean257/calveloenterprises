@@ -9,6 +9,7 @@ const SERVICE_PAGES = [
   { id: "business-development", label: "Business Development & Consulting" },
   { id: "digital-transformation", label: "Digital Transformation" },
   { id: "ai-training", label: "AI & Applied Training" },
+  { id: "cyber-security", label: "Cyber Security" },
 ];
 
 export default function Nav({ page, setPage }) {
