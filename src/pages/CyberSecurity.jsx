@@ -7,6 +7,7 @@ import {
 } from "../cybersecurity";
 import AnimatedDarkSection from "../components/AnimatedDarkSection";
 import Button from "../components/Button";
+import BookCallButton from "../components/BookCallButton";
 import { Diamond } from "../components/Icons";
 import SectionLabel from "../components/SectionLabel";
 
@@ -146,6 +147,7 @@ export default function CyberSecurity({ setPage }) {
                 >
                   {service.description}
                 </p>
+                <BookCallButton size="sm" style={{ marginTop: 16 }} />
               </article>
             ))}
           </div>
@@ -327,6 +329,7 @@ export default function CyberSecurity({ setPage }) {
                   >
                     Request a quote
                   </Button>
+                  <BookCallButton size="sm" style={{ marginTop: 12 }} />
                 </article>
               );
             })}
@@ -353,39 +356,67 @@ export default function CyberSecurity({ setPage }) {
                 style={{
                   minWidth: 0,
                   background: C.white,
-                  border: `1px solid ${C.paperDim}`,
+                  border: `1px solid ${hexToRgba(C.ink, 0.2)}`,
                   borderRadius: 14,
-                  padding: 20,
+                  overflow: "hidden",
+                  boxShadow: `0 8px 24px ${hexToRgba(C.ink, 0.06)}`,
                   display: "flex",
                   flexDirection: "column",
-                  alignItems: "flex-start",
                 }}
               >
-                <h3
-                  className="font-display"
-                  style={{ color: C.ink, fontSize: 17, lineHeight: 1.35, margin: "0 0 8px" }}
-                >
-                  {service.name}
-                </h3>
-                <p
-                  className="font-body"
+                <img
+                  src={service.image}
+                  alt={service.imageAlt}
+                  loading="lazy"
                   style={{
-                    color: C.muted,
-                    fontSize: 13.5,
-                    lineHeight: 1.6,
-                    margin: "0 0 20px",
+                    display: "block",
+                    width: "100%",
+                    height: 168,
+                    objectFit: "cover",
+                  }}
+                />
+                <div
+                  style={{
+                    padding: 20,
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "flex-start",
                     flex: 1,
                   }}
                 >
-                  {service.description}
-                </p>
-                <Button
-                  tone="outlineInk"
-                  icon={ArrowRight}
-                  onClick={() => requestQuote(service.name)}
-                >
-                  Request a quote
-                </Button>
+                  <h3
+                    className="font-display"
+                    style={{
+                      color: C.ink,
+                      fontSize: 17,
+                      lineHeight: 1.35,
+                      margin: "0 0 8px",
+                    }}
+                  >
+                    {service.name}
+                  </h3>
+                  <p
+                    className="font-body"
+                    style={{
+                      color: C.muted,
+                      fontSize: 13.5,
+                      lineHeight: 1.6,
+                      margin: "0 0 20px",
+                      flex: 1,
+                    }}
+                  >
+                    {service.description}
+                  </p>
+                  <Button
+                    tone="outlineInk"
+                    icon={ArrowRight}
+                    style={{ borderWidth: 2 }}
+                    onClick={() => requestQuote(service.name)}
+                  >
+                    Request a quote
+                  </Button>
+                  <BookCallButton size="sm" style={{ marginTop: 12 }} />
+                </div>
               </article>
             ))}
           </div>

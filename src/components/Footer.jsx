@@ -2,6 +2,7 @@ import { Mail, Facebook, Instagram } from "lucide-react";
 import { C } from "../theme";
 import { NAV, CONTACT } from "../data";
 import Logo from "./Logo";
+import BookCallButton from "./BookCallButton";
 
 const SOCIALS = [
   {
@@ -84,6 +85,7 @@ export default function Footer({ setPage }) {
               style={{ display: "flex", flexDirection: "column", gap: 12, fontSize: 14 }}
               className="font-body"
             >
+              <BookCallButton style={{ alignSelf: "flex-start" }} />
               <a
                 href={`mailto:${CONTACT.email}`}
                 className="foc"

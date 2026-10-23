@@ -15,6 +15,7 @@ import AiTraining from "./pages/AiTraining";
 import BusinessDevelopment from "./pages/BusinessDevelopment";
 import DigitalTransformation from "./pages/DigitalTransformation";
 import CyberSecurity from "./pages/CyberSecurity";
+import BookCallButton from "./components/BookCallButton";
 
 const PAGE_TO_PATH = {
   home: "/",
@@ -321,6 +322,27 @@ export default function App() {
       {page === "contact" && <Contact />}
       {page === "privacy" && <Privacy />}
       {page === "terms" && <Terms />}
+      <section style={{ background: C.paper, padding: "32px 24px" }}>
+        <div
+          style={{
+            maxWidth: 1180,
+            margin: "0 auto",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            flexWrap: "wrap",
+            gap: 20,
+          }}
+        >
+          <p
+            className="font-display"
+            style={{ color: C.ink, fontSize: 20, fontWeight: 600, margin: 0 }}
+          >
+            Have a project in mind? Let's talk.
+          </p>
+          <BookCallButton />
+        </div>
+      </section>
       <Footer setPage={updatePage} />
 
       <a

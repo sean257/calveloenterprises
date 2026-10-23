@@ -7,6 +7,10 @@ export default function Button({
   onClick,
   icon: Icon = ArrowRight,
   size = "md",
+  style = {},
+  href,
+  target,
+  rel,
 }) {
   const base = {
     display: "inline-flex",
@@ -28,15 +32,26 @@ export default function Button({
         : tone === "outlineInk"
           ? { background: "transparent", color: C.ink, border: `1px solid rgba(10,27,51,0.25)` }
           : { background: C.ink, color: C.white };
+  const Component = href ? "a" : "button";
   return (
-    <button
+    <Component
       onClick={onClick}
+      href={href}
+      target={target}
+      rel={rel}
       className="foc"
-      style={{ ...base, ...pad, ...styles, transition: "transform .15s ease, opacity .15s ease" }}
+      style={{
+        ...base,
+        ...pad,
+        ...styles,
+        textDecoration: href ? "none" : undefined,
+        transition: "transform .15s ease, opacity .15s ease",
+        ...style,
+      }}
       onMouseEnter={(e) => (e.currentTarget.style.transform = "translateY(-2px)")}
       onMouseLeave={(e) => (e.currentTarget.style.transform = "translateY(0)")}
     >
       {children} <Icon size={16} aria-hidden="true" />
-    </button>
+    </Component>
   );
 }

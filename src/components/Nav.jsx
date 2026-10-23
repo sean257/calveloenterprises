@@ -4,6 +4,7 @@ import { C } from "../theme";
 import { NAV } from "../data";
 import Logo from "./Logo";
 import Button from "./Button";
+import BookCallButton from "./BookCallButton";
 
 const SERVICE_PAGES = [
   { id: "business-development", label: "Business Development & Consulting" },
@@ -180,8 +181,9 @@ export default function Nav({ page, setPage }) {
             );
           })}
         </nav>
-        <div className="nav-desktop-cta">
-          <Button tone="gold" onClick={() => go("contact")}>
+        <div className="nav-desktop-cta" style={{ display: "flex", alignItems: "center", gap: 8 }}>
+          <BookCallButton size="sm" label="Book a call" />
+          <Button size="sm" tone="outline" onClick={() => go("contact")}>
             Get in touch
           </Button>
         </div>
@@ -286,9 +288,12 @@ export default function Nav({ page, setPage }) {
             );
           })}
           <div style={{ marginTop: 8 }}>
-            <Button tone="gold" onClick={() => go("contact")}>
-              Get in touch
-            </Button>
+            <BookCallButton />
+            <div style={{ marginTop: 8 }}>
+              <Button tone="outline" onClick={() => go("contact")}>
+                Get in touch
+              </Button>
+            </div>
           </div>
         </div>
       )}

@@ -3,6 +3,7 @@ import { SERVICES } from "../data";
 import AnimatedDarkSection from "../components/AnimatedDarkSection";
 import SectionLabel from "../components/SectionLabel";
 import Button from "../components/Button";
+import BookCallButton from "../components/BookCallButton";
 import { Diamond, NodeList } from "../components/Icons";
 
 export default function Services({ setPage }) {
@@ -83,6 +84,7 @@ export default function Services({ setPage }) {
                     {i === 5 ? "View all cyber security services & packages" : "Learn More"}
                   </Button>
                 )}
+                <BookCallButton size="sm" style={{ marginTop: 12, width: "100%" }} />
               </div>
             ))}
           </div>

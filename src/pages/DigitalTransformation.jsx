@@ -2,6 +2,7 @@ import { C } from "../theme";
 import AnimatedDarkSection from "../components/AnimatedDarkSection";
 import SectionLabel from "../components/SectionLabel";
 import Button from "../components/Button";
+import BookCallButton from "../components/BookCallButton";
 
 const TRANSFORMATION_OFFERINGS = [
   {
@@ -264,6 +265,7 @@ export default function DigitalTransformation({ setPage }) {
                   >
                     Learn More
                   </Button>
+                  <BookCallButton size="sm" style={{ marginTop: 12 }} />
                 </div>
               </div>
             ))}
@@ -411,6 +413,7 @@ export default function DigitalTransformation({ setPage }) {
                     >
                       Learn More
                     </Button>
+                    <BookCallButton size="sm" style={{ marginTop: 12 }} />
                   </div>
                 </div>
               ))}

@@ -137,13 +137,22 @@ export const CYBER_SECURITY_ONE_OFFS = [
   {
     name: "Security Health Check",
     description: "A fixed-scope assessment with a clear report.",
+    image:
+      "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=900&q=80",
+    imageAlt: "Digital network security visualization",
   },
   {
     name: "Website Security & Cleanup",
     description: "Security checks and cleanup for a compromised or vulnerable website.",
+    image:
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=900&q=80",
+    imageAlt: "Code displayed on a computer screen",
   },
   {
     name: "Emergency Incident Response",
     description: "Help to contain and investigate an active security incident.",
+    image:
+      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=900&q=80",
+    imageAlt: "Cybersecurity protection interface",
   },
 ];
