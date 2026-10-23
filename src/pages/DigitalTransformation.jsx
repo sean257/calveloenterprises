@@ -260,10 +260,16 @@ export default function DigitalTransformation({ setPage }) {
                   <Button
                     tone="gold"
                     size="sm"
-                    onClick={() => handleLearnMore(service.title)}
+                    onClick={() =>
+                      service.title === "Web Development"
+                        ? go("web-development")
+                        : handleLearnMore(service.title)
+                    }
                     style={{ marginTop: "auto" }}
                   >
-                    Learn More
+                    {service.title === "Web Development"
+                      ? "Explore services & packages"
+                      : "Learn More"}
                   </Button>
                   <BookCallButton size="sm" style={{ marginTop: 12 }} />
                 </div>

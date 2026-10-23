@@ -14,6 +14,7 @@ import Faq from "./pages/Faq";
 import AiTraining from "./pages/AiTraining";
 import BusinessDevelopment from "./pages/BusinessDevelopment";
 import DigitalTransformation from "./pages/DigitalTransformation";
+import WebDevelopment from "./pages/WebDevelopment";
 import CyberSecurity from "./pages/CyberSecurity";
 import BookCallButton from "./components/BookCallButton";
 
@@ -26,6 +27,7 @@ const PAGE_TO_PATH = {
   "ai-training": "/ai-training",
   "business-development": "/business-development",
   "digital-transformation": "/digital-transformation",
+  "web-development": "/web-development",
   "cyber-security": "/cyber-security",
   contact: "/contact",
   privacy: "/privacy",
@@ -176,6 +178,20 @@ const META = {
       "buy software licences Zimbabwe",
     ],
   },
+  "web-development": {
+    title: "Web Development Services & Packages | Calvelo",
+    description:
+      "Explore quote-based web development services and packages from Calvelo, including business websites, e-commerce stores, web applications, portals, redesigns, and support.",
+    keywords: [
+      "web development Zimbabwe",
+      "website development Harare",
+      "e-commerce website Zimbabwe",
+      "web applications Zimbabwe",
+      "customer portals",
+      "website redesign",
+      "website maintenance and support",
+    ],
+  },
   "cyber-security": {
     title: "Cyber Security Services & Packages | Calvelo Business Development",
     description:
@@ -318,6 +334,7 @@ export default function App() {
       {page === "ai-training" && <AiTraining setPage={updatePage} />}
       {page === "business-development" && <BusinessDevelopment setPage={updatePage} />}
       {page === "digital-transformation" && <DigitalTransformation setPage={updatePage} />}
+      {page === "web-development" && <WebDevelopment setPage={updatePage} />}
       {page === "cyber-security" && <CyberSecurity setPage={updatePage} />}
       {page === "contact" && <Contact />}
       {page === "privacy" && <Privacy />}
