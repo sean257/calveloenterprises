@@ -1,10 +1,11 @@
 import { CalendarDays } from "lucide-react";
 import Button from "./Button";
+import { C } from "../theme";
 
 export const BOOKING_URL = "https://calendly.com/calveloenterprises/15min";
 
 export default function BookCallButton({
-  tone = "gold",
+  tone = "outlineInk",
   size = "md",
   label = "Book a 15-minute call",
   style = {},
@@ -17,7 +18,10 @@ export default function BookCallButton({
       tone={tone}
       size={size}
       icon={CalendarDays}
-      style={style}
+      style={{
+        ...(tone === "outlineInk" ? { border: `1px solid ${C.tealDeep}`, color: C.tealDeep } : {}),
+        ...style,
+      }}
       onClick={(event) => event.stopPropagation()}
     >
       {label}

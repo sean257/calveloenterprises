@@ -2,7 +2,6 @@ import { C } from "../theme";
 import AnimatedDarkSection from "../components/AnimatedDarkSection";
 import SectionLabel from "../components/SectionLabel";
 import Button from "../components/Button";
-import BookCallButton from "../components/BookCallButton";
 import { CheckCircle2, Brain, Zap, Sparkles, Workflow, Users, Shield } from "lucide-react";
 
 const TRAINING_COURSES = [
@@ -848,7 +847,6 @@ export default function AiTraining({ setPage }) {
                       </div>
                     ))}
                   </div>
-                  <BookCallButton size="sm" style={{ marginTop: "auto" }} />
                 </div>
               );
             })}
@@ -1103,7 +1101,6 @@ export default function AiTraining({ setPage }) {
                   >
                     Learn More
                   </Button>
-                  <BookCallButton size="sm" />
                 </div>
               </div>
             ))}
@@ -1253,7 +1250,6 @@ export default function AiTraining({ setPage }) {
                   <Button tone="gold" size="sm" onClick={() => handleLearnMore(workshop.title)} style={{ marginTop: "auto" }}>
                     Learn More
                   </Button>
-                  <BookCallButton size="sm" />
                 </div>
               </div>
             ))}

@@ -75,16 +75,18 @@ export default function Services({ setPage }) {
                 </div>
                 <NodeList items={s.items} tone={toneAt(i)} />
                 {servicePageMap[i] && (
-                  <Button
-                    tone="outline"
-                    size="sm"
-                    onClick={() => navigate(servicePageMap[i])}
-                    style={{ marginTop: 16, width: "100%" }}
-                  >
-                    {i === 5 ? "View all cyber security services & packages" : "Learn More"}
-                  </Button>
+                  <>
+                    <Button
+                      tone="gold"
+                      size="sm"
+                      onClick={() => navigate(servicePageMap[i])}
+                      style={{ marginTop: 16, width: "100%" }}
+                    >
+                      {i === 5 ? "View all cyber security services & packages" : "Learn More"}
+                    </Button>
+                    <BookCallButton size="sm" style={{ marginTop: 12, width: "100%" }} />
+                  </>
                 )}
-                <BookCallButton size="sm" style={{ marginTop: 12, width: "100%" }} />
               </div>
             ))}
           </div>

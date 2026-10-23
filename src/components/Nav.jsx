@@ -182,7 +182,7 @@ export default function Nav({ page, setPage }) {
           })}
         </nav>
         <div className="nav-desktop-cta" style={{ display: "flex", alignItems: "center", gap: 8 }}>
-          <BookCallButton size="sm" label="Book a call" />
+          <BookCallButton size="sm" label="Book a call" tone="outline" />
           <Button size="sm" tone="outline" onClick={() => go("contact")}>
             Get in touch
           </Button>
@@ -288,7 +288,7 @@ export default function Nav({ page, setPage }) {
             );
           })}
           <div style={{ marginTop: 8 }}>
-            <BookCallButton />
+            <BookCallButton tone="outline" />
             <div style={{ marginTop: 8 }}>
               <Button tone="outline" onClick={() => go("contact")}>
                 Get in touch

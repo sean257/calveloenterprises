@@ -7,7 +7,6 @@ import {
 } from "../cybersecurity";
 import AnimatedDarkSection from "../components/AnimatedDarkSection";
 import Button from "../components/Button";
-import BookCallButton from "../components/BookCallButton";
 import { Diamond } from "../components/Icons";
 import SectionLabel from "../components/SectionLabel";
 
@@ -147,7 +146,6 @@ export default function CyberSecurity({ setPage }) {
                 >
                   {service.description}
                 </p>
-                <BookCallButton size="sm" style={{ marginTop: 16 }} />
               </article>
             ))}
           </div>
@@ -329,7 +327,6 @@ export default function CyberSecurity({ setPage }) {
                   >
                     Request a quote
                   </Button>
-                  <BookCallButton size="sm" style={{ marginTop: 12 }} />
                 </article>
               );
             })}
@@ -415,7 +412,6 @@ export default function CyberSecurity({ setPage }) {
                   >
                     Request a quote
                   </Button>
-                  <BookCallButton size="sm" style={{ marginTop: 12 }} />
                 </div>
               </article>
             ))}

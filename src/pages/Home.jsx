@@ -4,7 +4,6 @@ import AnimatedDarkSection from "../components/AnimatedDarkSection";
 import Eyebrow from "../components/Eyebrow";
 import SectionLabel from "../components/SectionLabel";
 import Button from "../components/Button";
-import BookCallButton from "../components/BookCallButton";
 import BridgeGraphic from "../components/BridgeGraphic";
 import { Diamond, Chip, NodeList } from "../components/Icons";
 
@@ -196,7 +195,6 @@ export default function Home({ setPage }) {
                     {s.title}
                   </div>
                   <NodeList items={s.items.slice(0, 3)} tone={toneAt(i)} />
-                  <BookCallButton size="sm" style={{ marginTop: 18, width: "100%" }} />
                 </div>
               );
             })}
