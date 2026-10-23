@@ -1,10 +1,11 @@
 import {
-  AppWindow,
-  LayoutTemplate,
-  RefreshCw,
-  ShoppingCart,
-  UsersRound,
-  Wrench,
+  ContactRound,
+  Monitor,
+  PanelsTopLeft,
+  Server,
+  ShoppingBag,
+  Sparkles,
+  Headset,
 } from "lucide-react";
 import { C } from "../theme";
 import AnimatedDarkSection from "../components/AnimatedDarkSection";
@@ -14,46 +15,54 @@ import SectionLabel from "../components/SectionLabel";
 
 const WEB_SERVICES = [
   {
-    Icon: LayoutTemplate,
+    Icon: PanelsTopLeft,
     title: "Business Websites",
     description:
       "Professional, responsive websites that explain your offer and make it easy for customers to get in touch.",
   },
   {
-    Icon: ShoppingCart,
+    Icon: ShoppingBag,
     title: "E-commerce Stores",
     description:
       "Online stores with product catalogues and checkout flows shaped around your business requirements.",
   },
   {
-    Icon: AppWindow,
+    Icon: Monitor,
     title: "Web Applications",
     description:
       "Purpose-built web applications for business workflows, customer experiences, and digital services.",
   },
   {
-    Icon: UsersRound,
+    Icon: ContactRound,
     title: "Customer Portals",
     description:
       "Convenient online spaces that help customers access the information and services they need.",
   },
   {
-    Icon: RefreshCw,
+    Icon: Sparkles,
     title: "Website Redesign",
     description:
       "Refresh an existing website's structure, content, and experience to better support your goals.",
   },
   {
-    Icon: Wrench,
+    Icon: Headset,
     title: "Maintenance & Support",
+    description: "Ongoing website updates, maintenance, and technical support after launch.",
+  },
+  {
+    Icon: Server,
+    title: "Web Hosting",
     description:
-      "Ongoing website updates, maintenance, and technical support after launch.",
+      "Hosting setup and management to keep your website available, secure, and running smoothly.",
   },
 ];
 
 const WEB_PACKAGES = [
   {
     name: "Starter Website",
+    image:
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80",
+    imageAlt: "Web development workspace with a laptop",
     description:
       "A strong online foundation for businesses that need a clear, professional web presence.",
     features: [
@@ -65,6 +74,9 @@ const WEB_PACKAGES = [
   },
   {
     name: "Business Website",
+    image:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80",
+    imageAlt: "Business website analytics displayed on a screen",
     description:
       "A more complete website for organizations with multiple services, audiences, or lead journeys.",
     features: [
@@ -77,8 +89,10 @@ const WEB_PACKAGES = [
   },
   {
     name: "E-commerce Store",
-    description:
-      "An online storefront for businesses ready to present and sell products online.",
+    image:
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=900&q=80",
+    imageAlt: "Customer completing an online purchase",
+    description: "An online storefront for businesses ready to present and sell products online.",
     features: [
       "Product catalogue and store pages",
       "Cart and checkout setup",
@@ -157,18 +171,19 @@ export default function WebDevelopment({ setPage }) {
                 <div
                   aria-hidden="true"
                   style={{
-                    width: 48,
-                    height: 48,
+                    width: 54,
+                    height: 54,
                     display: "grid",
                     placeItems: "center",
-                    color: C.tealDeep,
-                    background: `${C.teal}18`,
-                    border: `1px solid ${C.teal}50`,
-                    borderRadius: 12,
+                    color: C.white,
+                    background: `linear-gradient(135deg, ${C.tealDeep}, ${C.ink2})`,
+                    border: `1px solid ${C.teal}80`,
+                    borderRadius: 16,
+                    boxShadow: `0 8px 20px ${C.teal}25`,
                     marginBottom: 18,
                   }}
                 >
-                  <Icon size={24} />
+                  <Icon size={25} strokeWidth={1.8} />
                 </div>
                 <h2
                   className="font-display"
@@ -215,64 +230,84 @@ export default function WebDevelopment({ setPage }) {
                   background: C.white,
                   border: `1px solid ${plan.popular ? C.tealDeep : C.paperDim}`,
                   borderRadius: 18,
-                  padding: 26,
+                  overflow: "hidden",
                   boxShadow: plan.popular ? `0 12px 32px ${C.teal}20` : "none",
                 }}
               >
-                {plan.popular && (
-                  <span
-                    className="font-mono"
-                    style={{
-                      alignSelf: "flex-start",
-                      color: C.ink,
-                      background: `${C.teal}50`,
-                      borderRadius: 999,
-                      padding: "6px 10px",
-                      fontSize: 10,
-                      letterSpacing: "0.08em",
-                      marginBottom: 14,
-                    }}
-                  >
-                    POPULAR
-                  </span>
-                )}
-                <h2
-                  className="font-display"
-                  style={{ color: C.ink, fontSize: 23, margin: "0 0 8px" }}
-                >
-                  {plan.name}
-                </h2>
-                <p
-                  className="font-body"
-                  style={{ color: C.muted, fontSize: 14, lineHeight: 1.6, margin: "0 0 22px" }}
-                >
-                  {plan.description}
-                </p>
-                <ul
-                  className="font-body"
+                <img
+                  src={plan.image}
+                  alt={plan.imageAlt}
+                  loading="lazy"
                   style={{
-                    color: C.text,
-                    fontSize: 13.5,
-                    lineHeight: 1.55,
-                    paddingLeft: 18,
-                    margin: "0 0 26px",
+                    display: "block",
+                    width: "100%",
+                    height: 168,
+                    objectFit: "cover",
+                  }}
+                />
+                <div
+                  style={{
+                    padding: 26,
                     display: "flex",
                     flexDirection: "column",
-                    gap: 10,
                     flex: 1,
                   }}
                 >
-                  {plan.features.map((feature) => (
-                    <li key={feature}>{feature}</li>
-                  ))}
-                </ul>
-                <Button
-                  tone="gold"
-                  onClick={() => requestQuote(plan.name)}
-                  style={{ marginTop: "auto" }}
-                >
-                  Request a quote
-                </Button>
+                  {plan.popular && (
+                    <span
+                      className="font-mono"
+                      style={{
+                        alignSelf: "flex-start",
+                        color: C.ink,
+                        background: `${C.teal}50`,
+                        borderRadius: 999,
+                        padding: "6px 10px",
+                        fontSize: 10,
+                        letterSpacing: "0.08em",
+                        marginBottom: 14,
+                      }}
+                    >
+                      POPULAR
+                    </span>
+                  )}
+                  <h2
+                    className="font-display"
+                    style={{ color: C.ink, fontSize: 23, margin: "0 0 8px" }}
+                  >
+                    {plan.name}
+                  </h2>
+                  <p
+                    className="font-body"
+                    style={{ color: C.muted, fontSize: 14, lineHeight: 1.6, margin: "0 0 22px" }}
+                  >
+                    {plan.description}
+                  </p>
+                  <ul
+                    className="font-body"
+                    style={{
+                      color: C.text,
+                      fontSize: 13.5,
+                      lineHeight: 1.55,
+                      paddingLeft: 18,
+                      margin: "0 0 26px",
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: 10,
+                      flex: 1,
+                    }}
+                  >
+                    {plan.features.map((feature) => (
+                      <li key={feature}>{feature}</li>
+                    ))}
+                  </ul>
+                  <Button
+                    tone="gold"
+                    onClick={() => requestQuote(plan.name)}
+                    style={{ marginTop: "auto" }}
+                  >
+                    Request a quote
+                  </Button>
+                </div>
               </article>
             ))}
           </div>
