@@ -40,7 +40,7 @@ export default function Home({ setPage }) {
                 marginBottom: 20,
               }}
             >
-              We help businesses run leaner, think sharper, and grow faster.
+              We help businesses do more with less, and grow smarter.
             </h1>
             <p
               className="font-body"
@@ -52,9 +52,8 @@ export default function Home({ setPage }) {
                 marginBottom: 32,
               }}
             >
-              Based in Harare, Calvelo provides business consulting in Zimbabwe, technology
-              solutions, and digital transformation to help organizations solve operational
-              challenges and grow.
+              Calvelo provides business consulting all over the world, technology solutions, and
+              digital transformation to help organizations solve operational challenges and grow.
             </p>
             <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
               <Button tone="gold" size="lg" onClick={() => go("contact")}>
